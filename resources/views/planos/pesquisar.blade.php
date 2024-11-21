@@ -59,7 +59,7 @@
                                     style="background-color: #fdfdfd;">
                                     <h3 class="text-xl font-semibold text-teal-800">{{ $plano->nome }}</h3>
                                     <p><strong>Tipo:</strong> <span class="text-gray-600">{{ $plano->tipo }}</span></p>
-                                    <p><strong>Benefícios:</strong> <span class="text-gray-600">{{ $plano->beneficios }}</span>
+                                    <p><strong>Cobertura:</strong> <span class="text-gray-600">{{ $plano->cobertura }}</span>
                                     </p>
                                     <p><strong>Faixa Etária:</strong> <span
                                             class="text-gray-600">{{ $plano->faixaetaria }}</span></p>

@@ -21,13 +21,13 @@
 
                                 <!-- Botão para comprar -->
                                 <a href="{{ route('finalizar.compra', $plano->id) }}"
-                                    class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition duration-200">
+                                   style="background-color:rgb(37 99 235);" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition duration-200">
                                     Comprar
                                 </a>
 
                                 <!-- Link para exibir os detalhes -->
                                 <a href="{{ route('plano.detalhes', $plano->id) }}"
-                                    class="inline-block mt-4 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition duration-200">
+                                    style="background-color:rgb(22 163 74);" class="inline-block mt-4 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition duration-200">
                                     Exibir Detalhes
                                 </a>
                             </div>

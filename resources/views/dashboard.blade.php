@@ -12,8 +12,7 @@
                     <h1 class="text-4xl font-bold text-center text-teal-600 mb-8">Bem-vindo(a) à Saúde+</h1>
                     <p class="text-lg text-center mb-6 text-gray-700">
                         Obrigado por se cadastrar! Na Saúde+, estamos comprometidos em oferecer o melhor serviço de
-                        saúde para você
-                        e sua família.
+                        saúde para você e sua família.
                     </p>
 
                     <!-- Seção de Planos -->
@@ -25,9 +24,9 @@
                             <li>Plano MEI</li>
                             <li>Plano Coletivo Empresarial</li>
                             <li>Plano Coletivo por Adesão</li>
-                        </ul>
+                        </ul><br>
                         <a href="{{ route('comprarPlanos') }}"
-                            class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition duration-200 text-lg">
+                            style="background-color: rgb(13 148 136);" class="inline-block mt-4 bg-teal-600 hover:bg-teal-700 font-bold py-2 px-6 rounded-lg shadow-lg transition duration-200 text-lg">
                             Comprar Planos
                         </a>
                     </div>
@@ -51,7 +50,7 @@
                             necessidades.
                         </p>
                         <button onclick="window.location.href='{{ route('compararPlanos') }}'"
-                            class="text-white bg-yellow-500 hover:bg-yellow-600 px-4 py-2 mt-4 rounded">
+                            style="background-color:rgb(234 88 12);" class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 mt-4 rounded-lg shadow-lg transition duration-200">
                             Clique aqui para comparar os planos
                         </button>
                     </div>
@@ -61,12 +60,10 @@
                         <h2 class="text-2xl font-semibold text-teal-700">Pesquise Nossos Planos</h2>
                         <p class="text-gray-700 mt-4">
                             Encontre o plano ideal filtrando por tipo de cobertura, faixa etária e outras opções para
-                            escolher o
-                            melhor
-                            para você.
+                            escolher o melhor para você.
                         </p>
                         <button onclick="window.location.href='{{ route('pesquisarPlanos') }}'"
-                            class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 mt-4 rounded">
+                            style="background-color:rgb(79 70 229);" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 mt-4 rounded-lg shadow-lg transition duration-200">
                             Clique aqui para pesquisar os planos
                         </button>
                     </div>
@@ -80,7 +77,7 @@
                             Você pode abrir um ticket de suporte ou consultar a seção de FAQ para respostas rápidas.
                         </p>
                         <button onclick="window.location.href='{{ route('suporte.index') }}'"
-                            class="text-white bg-red-500 hover:bg-red-600 px-4 py-2 mt-4 rounded">
+                            style="background-color:rgb(219 39 119);" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 mt-4 rounded-lg shadow-lg transition duration-200">
                             Acessar Suporte
                         </button>
                     </div>

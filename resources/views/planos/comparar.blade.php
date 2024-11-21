@@ -30,7 +30,7 @@
                         </div>
 
                         <button type="submit"
-                            class="mt-6 bg-teal-500 text-white px-4 py-2 rounded shadow hover:bg-teal-600 transition duration-300 ease-in-out">
+                            style="background-color: rgb(20 184 166);" class="mt-6 bg-teal-500 text-white px-4 py-2 rounded shadow hover:bg-teal-600 transition duration-300 ease-in-out">
                             Comparar
                         </button>
                     </form>

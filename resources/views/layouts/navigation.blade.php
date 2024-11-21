@@ -21,6 +21,11 @@
                         {{ __('Comprar') }}
                     </x-nav-link>
 
+                    <!-- Novo link Comparar -->
+                    <x-nav-link :href="route('compararPlanosForm')" :active="request()->routeIs('compararPlanosForm')">
+                        {{ __('Comparar') }}
+                    </x-nav-link>
+
                     <!-- Novo link Pesquisar Planos -->
                     <x-nav-link :href="route('pesquisarPlanos')" :active="request()->routeIs('pesquisarPlanos')">
                         {{ __('Pesquisar Planos') }}
@@ -89,6 +94,11 @@
             <!-- Novo link Comprar (versão mobile) -->
             <x-responsive-nav-link :href="route('comprar.planos')" :active="request()->routeIs('comprar.planos')">
                 {{ __('Comprar') }}
+            </x-responsive-nav-link>
+
+            <!-- Novo link Comparar (versão mobile) -->
+            <x-responsive-nav-link :href="route('compararPlanosForm')" :active="request()->routeIs('compararPlanosForm')">
+                {{ __('Comparar') }}
             </x-responsive-nav-link>
 
             <!-- Novo link Pesquisar Planos (versão mobile) -->
