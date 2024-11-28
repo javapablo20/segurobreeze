@@ -16,4 +16,6 @@ class Plano extends Model
         'faixaetaria',
         'preco',
     ];
+
+
 }
