@@ -42,4 +42,11 @@
             </x-primary-button>
         </div>
     </form>
+    <!-- Link para a página de Registro -->
+    <div class="mt-4 text-center">
+        <span class="text-sm text-gray-600">Não tem uma conta?</span>
+        <a href="{{ route('register') }}" class="text-sm text-indigo-600 hover:text-indigo-800">
+            {{ __('Criar uma conta') }}
+        </a>
+    </div>
 </x-guest-layout>

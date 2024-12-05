@@ -86,4 +86,11 @@
             </x-primary-button>
         </div>
     </form>
+    <!-- Link para a página de Login -->
+    <div class="mt-4 text-center">
+        <span class="text-sm text-gray-600">Já tem uma conta?</span>
+        <a href="{{ route('login') }}" class="text-sm text-indigo-600 hover:text-indigo-800">
+            {{ __('Fazer login') }}
+        </a>
+    </div>
 </x-guest-layout>

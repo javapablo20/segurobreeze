@@ -11,29 +11,37 @@
         <!-- Grid de planos selecionados -->
         <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             @foreach ($planosSelecionados as $plano)
-                <div
-                    class="bg-gradient-to-br from-yellow-100 to-teal-50 shadow-lg rounded-lg p-6 border border-teal-200 transform transition duration-300 hover:scale-105">
-                    <h2 class="text-3xl font-bold text-teal-700 mb-4">{{ $plano->nome }}</h2>
-                    <p class="text-lg">
-                        <strong class="text-teal-800">Tipo:</strong> <span class="text-gray-800">{{ $plano->tipo }}</span>
-                    </p>
-                    <div class="text-lg">
-                        <strong class="text-teal-800">Benefícios:</strong>
-                        <ul class="list-disc pl-5 text-gray-800">
-                            @foreach (json_decode($plano->cobertura) as $beneficio)
-                                <li>{{ $beneficio }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    <p class="text-lg">
-                        <strong class="text-teal-800">Faixa Etária:</strong> <span
-                            class="text-gray-800">{{ $plano->faixaetaria }}</span>
-                    </p>
-                    <p class="text-lg">
-                        <strong class="text-teal-800">Preço:</strong> <span class="text-red-600 font-semibold">R$
-                            {{ number_format($plano->preco, 2, ',', '.') }}</span>
-                    </p>
-                </div>
+                        <div
+                            class="bg-gradient-to-br from-yellow-100 to-teal-50 shadow-lg rounded-lg p-6 border border-teal-200 transform transition duration-300 hover:scale-105">
+                            <h2 class="text-3xl font-bold text-teal-700 mb-4">{{ $plano->nome }}</h2>
+                            <p class="text-lg">
+                                <strong class="text-teal-800">Tipo:</strong> <span class="text-gray-800">{{ $plano->tipo }}</span>
+                            </p>
+                            <div class="text-lg">
+                                <strong class="text-teal-800">Benefícios:</strong>
+                                <ul class="list-disc pl-5 text-gray-800">
+                                    @php
+                                        // Tenta decodificar como JSON
+                                        $beneficios = json_decode($plano->cobertura, true);
+                                        // Se não for JSON válido, divide por vírgulas
+                                        if (is_null($beneficios)) {
+                                            $beneficios = explode(',', $plano->cobertura);
+                                        }
+                                    @endphp
+                                    @foreach ($beneficios as $beneficio)
+                                        <li>{{ trim($beneficio) }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            <p class="text-lg">
+                                <strong class="text-teal-800">Faixa Etária:</strong> <span
+                                    class="text-gray-800">{{ $plano->faixaetaria }}</span>
+                            </p>
+                            <p class="text-lg">
+                                <strong class="text-teal-800">Preço:</strong> <span class="text-red-600 font-semibold">R$
+                                    {{ number_format($plano->preco, 2, ',', '.') }}</span>
+                            </p>
+                        </div>
             @endforeach
         </div>
     </div>
